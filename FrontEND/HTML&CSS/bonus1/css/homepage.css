@@ -1,0 +1,207 @@
+
+ 
+  body ,html
+{
+	height:100%;
+	margin:0;
+}
+ .container
+{
+	position: relative;
+	background-image: url('../img/header.jpg');
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center;
+	height:75%;
+	
+	
+}
+ .navbar
+{
+	list-style:none;
+	font-size:20px;	
+	margin-top:0;
+	padding: 10px;
+	overflow: hidden;
+	background-color: #333;
+	position: -webkit-sticky; 
+	position: sticky;
+	top: 0;
+	z-index:2;
+}
+
+li {
+  float: left;
+}
+
+
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.header{
+	position:absolute;
+	text-align:center;
+	top:20%;
+	left:25%;
+	width:75%;
+	display: flex;
+	align-items: center;
+	
+}
+
+.personalphoto
+{
+	
+	border-radius:50%;
+	border:solid 4px aqua ;
+	width:300px;
+	
+	float:left;
+}
+.information
+{
+	
+	text-align:center;
+	margin-left:50px;
+	font-size:30px;
+	
+	
+}
+.profilename{
+	font-family: Lucida Console,Lucida Sans Typewriter,monaco,Bitstream Vera Sans Mono,monospace; 
+	font-size:50px;
+	font-weight:bold;
+	text-decoration: underline;
+	text-decoration-color: aqua;
+	text-decoration-style: wavy;
+	text-underline-offset: 8px;
+}
+.profilename:hover{
+	background-color:hsla(0, 100%, 30%, 0.3);
+}
+.job
+{
+font-family: cursive;
+font-size:30px;
+}
+.resume
+{
+	border:solid 3px black;
+	background-color:transparent;
+	border-radius:10px;
+	
+}
+.resume a 
+{
+	text-decoration:none;
+	font-size:25px;
+	color:black;
+	padding:5px;
+}
+.resume:hover{
+	border:white;
+	box-shadow: gray;
+	background-color:hsla(0, 100%, 30%, 0.3);
+}
+
+.all
+{
+	position:absolute;
+}
+.about
+{
+	position:relative;
+	left:15%;
+	width:80%;
+	margin-top: 20px;
+	text-align:center;
+	align-items:center;
+	background: rgb(238,174,202);
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	border-radius:10px;
+	padding:10px;
+}
+
+div.about h1
+{
+	font-family: "Courier New", Courier, monospace;
+	font-size: 45px;
+	font-weight: 700;
+	letter-spacing: 4px;
+	font-variant: normal;
+	text-transform: uppercase;
+	text-decoration: underline;
+	text-decoration-color: white;
+	
+	text-underline-offset: 10px;
+	text-decoration-thickness: 1px;
+	text-underline:1px;
+}
+
+.talk
+{
+	padding:10px;
+	width:80%;
+	position:relative;
+	left:10%;
+	font-size:20px;	
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-weight: 200;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height:50px;
+}
+
+ul.social{
+list-style-type: none;
+}
+
+ul.social a{
+	margin : 10px;
+	
+	
+}
+a img
+{
+	border : solid 1px white;
+	border-radius:50%;
+}
+
+a img :hover{
+	border:white;
+	box-shadow: gray;
+	background-color:hsla(0, 100%, 30%, 0.3);
+}
+.end
+
+{
+	margin-top:100px;
+	background: rgb(238,174,202);
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+	height:30%;
+	position:relative;
+	align-items:center;
+	left:5%;
+	text-align:center;
+	border-radius:10px;
+	
+}
+
+	
+
+
+
+
+

@@ -1,0 +1,172 @@
+ 
+  body ,html
+{
+	height:100%;
+	margin:0;
+}
+ .container
+{
+	position: relative;
+	background-image: url('../img/header.jpg');
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center;
+	height:75%;
+	
+	
+}
+ .navbar
+{
+	list-style:none;
+	font-size:20px;	
+	margin-top:0;
+	padding: 10px;
+	overflow: hidden;
+	background-color: #333;
+	position: -webkit-sticky; 
+	position: sticky;
+	top: 0;
+	z-index:2;
+}
+
+li {
+  float: left;
+}
+
+
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.header{
+	position:absolute;
+	text-align:center;
+	top:20%;
+	left:25%;
+	width:75%;
+	display: flex;
+	align-items: center;
+	
+}
+
+.personalphoto
+{
+	
+	border-radius:50%;
+	border:solid 4px aqua ;
+	width:300px;
+	position:relative;
+	left:20%;
+	float:left;
+}
+
+
+
+/** For form style ----------**/
+.logform
+{
+	background: rgb(174,238,235);
+	background: radial-gradient(circle, rgba(174,238,235,1) 0%, rgba(194,194,194,1) 100%);
+	margin:50px;
+	width:50%;
+	border: solid 3px pink;
+	border-radius : 10%;
+	padding:30px;
+	text-align: left;
+	position: relative;
+	left:20%;
+}
+
+.logform img
+{
+	width:25%;
+	position:relative;
+	border:solid white;
+	border-radius:50%;
+	left:35%;
+}
+.logform img:hover{
+	border:solid 3px gray;
+}
+
+.logform p{
+	font-size:40px;
+	text-align:center;
+}
+
+form{
+	
+	position:relative;
+	left:30px;
+	background-color:white;
+	box-shadow:solid 3px gray;
+	align-items:center;
+	width:90%;
+	padding:20px;padding-top:40px;
+	
+	font-size:25px;
+}
+
+input 
+{
+	border: 0px;
+	border-bottom: solid black 1px ;
+	background-color:transparent;
+	margin-top:40px;
+	width:30%;
+}
+
+#sub
+{
+	background: rgb(174,238,182);
+	background: radial-gradient(circle, rgba(174,238,182,1) 0%, rgba(62,190,122,1) 100%);
+    width:50%;
+	align-items:center;
+	margin-left:150px;
+	border:0px;
+	padding-top:20px;
+	padding-bottom:20px;
+	font-size:30px;
+	cursor:pointer;
+	border-radius:5px;
+}
+
+#sub:hover{
+	border:solid 2px gray;
+}
+
+.thank
+{
+	background: rgb(174,238,235);
+	background: radial-gradient(circle, rgba(174,238,235,1) 0%, rgba(194,194,194,1) 100%);
+	margin:50px;
+	width:50%;
+	border: solid 3px pink;
+	border-radius : 10%;
+	padding:30px;
+	text-align:center;
+	position: relative;
+	left:20%;
+	height:100%;
+	align-items:center;
+}
+
+
+
+.thank img
+{
+	width:25%;
+	position:relative;
+	border:solid white;
+	border-radius:50%;
+	left:0;
+}

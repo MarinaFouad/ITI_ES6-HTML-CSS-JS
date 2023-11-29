@@ -1,0 +1,42 @@
+
+.contact
+{
+	width:80%;
+	background: rgb(178,196,180);
+	background: radial-gradient(circle, rgba(178,196,180,1) 0%, rgba(196,210,202,1) 100%);
+	align-items:center;
+	margin-left:200px;
+	text-align:center;
+	background-repeat:no-repeat;
+	background-size: cover;
+	background-position:center;
+}
+.contact h1
+{
+	padding-top:20px;
+}
+
+.contact .section
+{
+	display:inline;
+	
+}
+.map
+{
+	display:flex;
+	float:left;
+}
+.contactform
+{
+	display:flex;
+	float:right;
+	text-align:left;
+}
+
+input[type=textbox]
+{
+	border:solid 2px black;
+	height:10%;
+	width:30%;
+}
+
