@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>try</title>
+</head>
+<body>
+
+ 
+  <script>
+    
+    ///////////////////////find last index
+
+    const arrLastInd = [54, 34, 55, 75, 98, 77];
+
+    const lastEvenIndex = arrLastInd.findLast((element) => {
+      return element % 2 === 0;
+    });
+
+    console.log(lastEvenIndex); // 98
+
+    ////////////////////////
+
+    const arrToSplice = ["red", "orange", "yellow", "green", "blue", "purple"]; 
+    const newArr = arrToSplice.toSpliced(2, 1, "pink", "cyan"); 
+    console.log(newArr); 
+    // ["red", "orange", "pink", "cyan", "green", "blue", "purple"]
+    console.log(newArr[3]);
+    // 'cyan'
+    console.log(arrToSplice[3]);
+    // ‘green’
+
+  </script>
+
+</body>
+</html>

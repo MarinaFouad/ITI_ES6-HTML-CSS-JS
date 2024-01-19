@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+</head>
+<body>
+
+    <form id="dataForm">
+        tile:
+        <input type="text" id="userTitle" name="title" >
+        <br>
+        data:
+        <input type="text" id="userData" name="data" >
+        <br>
+        ID:
+        <input type="number" id="userId" name="ID" >
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+      <script>
+        
+        
+        let dataForm=document.getElementById("dataForm")
+        dataForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+        
+            const userTitle = document.getElementById("userTitle").value;
+            const userData = document.getElementById("userData").value;
+            const userId = document.getElementById("userId").value;
+            const allData = { title: userTitle, data: userData , userId: userId };
+
+            postData("https://jsonplaceholder.typicode.com/posts", allData)
+                .then((response) => {
+                    console.log(response); })
+                .catch((error) => {
+                    console.error("Error:", error);  });
+     });
+    
+    async function postData(url = "", allData = {}) {
+        const response = await fetch(url,{ method: "POST",headers: {"Content-Type": "application/json" }, body: JSON.stringify(allData) });
+        return await response.json();
+    }
+
+    </script>
+    
+</body>
+</html>

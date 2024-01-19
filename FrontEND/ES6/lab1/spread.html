@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spread</title>
+</head>
+<body>
+    
+
+
+    <script>
+        //// to equal numbers to number in the array 
+
+        let num = prompt("Enter numbers separated by commas");
+        let spreadArr = num.split(",");
+
+        let num1,num2,otherNum;
+        [num1,num2,...otherNum]=[...spreadArr];
+
+        document.write(`spreadArr= ${spreadArr} , num1= ${num1} , num2= ${num2} , otherNum= ${otherNum}  `);
+
+         //// to Add Array to another array 
+
+
+         secSpreadArr=[...spreadArr,10,20,44,11];
+         document.write(`Second spread Arr= ${secSpreadArr} `);
+
+
+    </script>
+</body>
+</html>

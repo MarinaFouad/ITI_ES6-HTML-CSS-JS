@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow Function</title>
+</head>
+<body>
+  
+    <input type="button" id="btn" value="Clicked!">
+
+    <script>
+
+//////////////////////////////Filter /////////////////////
+
+        // let num = prompt("Enter numbers separated by commas");
+        // let numArr = num.split(",");
+        // let filterd= numArr.filter( (odd=> odd%2!==0) );
+
+        // alert (`filtered odd numbers are ${filterd}`);
+
+        
+//////////////////////////forEach////////////////////////////
+
+
+// numArr.forEach((even)=> {
+//     if (even%2==0){
+//         console.log(even);
+//     }
+// }); 
+
+
+////////////////////map///////////////////////////////
+
+// let mapArr= numArr.map((sq)=> {return sq**2 ;});
+
+// alert(`map squaring ${mapArr}`);
+
+
+////////////////////////////////////////////
+
+
+// document.getElementById("btn").onclick = function(){
+//             console.log(this); 
+//             console.log(this.value); 
+//         }
+
+        document.getElementById("btn").onclick = ()=>{
+            console.log(this);
+            console.log(this.value); 
+        }
+
+    </script>
+</body>
+</html>

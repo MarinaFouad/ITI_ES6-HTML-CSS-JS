@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>generator</title>
+</head>
+<body>
+    
+    <button id="generateBtn" > tips </button>
+
+    <button id="intervalBtn" > tips by interval </button>
+
+    <script>
+
+        let genArr = ["First tip","second Tip", "third tip"," 4 Tip" , "5 tip","6 Tip" ,"7 tip","8 Tip"];
+
+        function * tips(Arr){
+            for (let i= 0 ; i< genArr.length ; i++){
+                yield genArr[i];
+            }
+        }
+
+        var generate = tips(genArr);
+
+
+//////////////////////////// using interval 
+        
+
+// setInterval(function(){ alert(generate.next().value)},3000);
+
+/////////////////////////using for ...of ///////////////////////////////////////////////////
+
+        // let tipBtn = document.getElementById("generateBtn");
+       
+        // tipBtn.addEventListener('click', function (){
+        //     for(let tip of generate){
+        //         alert(tip);
+        //     }
+        // })
+
+///////////button that uses setInterval ////////////////////////////////////
+
+        // let intervalBtn = document.getElementById("intervalBtn");
+
+        // intervalBtn.addEventListener('click',timeBtn);
+
+        // function timeBtn(){
+        // let timer = setInterval(()=>{
+        //     const done  = generate.next().done;
+        //       if (done) {
+        //       clearInterval(timer);
+        //          }
+        //     else {
+        //    alert(generate.next().value)}} ,3000);}
+        
+
+
+
+
+
+    </script>
+
+</body>
+</html>

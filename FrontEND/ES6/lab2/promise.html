@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    
+    <div>
+        <img id="userImg" style="display: none;" src="images.jfif">
+    </div>
+
+
+    <script>
+        
+        start()
+
+        let userImg = document.getElementById("userImg");
+        
+        function LoadData(){
+            return new Promise((resolve,reject)=>{
+                        setTimeout( ()=>resolve("Welcome") ,3000)
+                    } 
+            )
+        }
+
+        function direct(){
+            window.location.href = 'fetch.html';
+        }
+       
+        function start(){
+            LoadData()
+            .then((m)=>{  alert(m); })
+            .then(function(){
+                 userImg.style.display= 'block';}
+            )
+            .then((hi)=>{
+                        setTimeout( alert("thanks") ,6000)
+                    } )
+            .then(direct)
+            .catch(()=>{alert("error")}); //reject
+        }
+
+        
+    </script>
+</body>
+</html>
