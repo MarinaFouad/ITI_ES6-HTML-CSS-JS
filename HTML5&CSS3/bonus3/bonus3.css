@@ -1,0 +1,29 @@
+.container {
+    width: 70%;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid black;
+  }
+  
+  .rolling {
+    display: flex;
+    animation: roll 6s linear infinite;
+    animation-direction: alternate-reverse;
+  }
+  
+  .rolling img {
+    flex: 0 0 auto;
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+  }
+  
+  @keyframes roll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
