@@ -1,0 +1,126 @@
+.colPerent{
+    display: block;
+    background-color: rgb(173, 156, 188);
+    margin: 5px;
+    padding: auto;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+@font-face {
+    font-family: custom;
+    src: url(ChokoExtrude-X3j9d.otf), url(ChokoMilky-gx8gR.otf);
+}
+
+.col{
+    margin: 10px;  
+    column-count: 3;
+    column-gap: 10px;
+    column-rule: 1px solid;
+    display: block;
+    font-family: custom;
+    font-size: 30px;
+}
+
+.verName{
+   
+   display: inline-block;
+    transform: rotate(-90deg);
+    font-size: larger;
+    width: fit-content;
+    position: relative;
+    float: right;
+}
+
+
+.animat{
+    width: 100px ;
+    height: 100px;
+    transition-duration: 2s;
+    display: block;
+}
+
+
+.animat:hover{
+    width: 200px;
+    height: 200px;
+    transform: rotate(40deg);
+}
+
+
+.smile{
+    animation-name: smiley;
+    animation-duration: 5s;
+}
+
+@keyframes smiley{
+
+    0%{
+        rotate: 180deg;
+        margin: 0;
+    }
+
+    25%{
+        width: 70px;
+        height: 70px;
+    }
+    50%{
+        rotate: 360deg;
+        margin-left: 100px;
+        width: 100px;
+        height: 100px;
+    }
+    100%{
+        rotate: 0;
+        margin-left: 0;
+    }
+}
+
+
+.tiger{
+    margin: 0;
+    transition-property: all;
+    transition-duration: 10s;
+}
+
+.tiger:hover{
+   
+    transform: translateX(100px) rotateY(180deg);
+}
+
+
+.tiger2{
+    animation-name: tigerAn;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes tigerAn {
+    
+    0%{
+        margin-left: 0px;
+        transform: scaleX(-1);
+    }
+
+    25%{
+        margin-left: 50px;
+        transform: scaleX(-1);
+    }
+    50%{
+        margin-left: 100px;
+        transform: scaleX(-1);
+    }
+    75%{
+        margin-left: 70px;
+        transform: scaleX(1);
+    }
+    100%{
+        margin-left:0px;
+        transform: scaleX(1);
+    }
+
+
+    
+}
+

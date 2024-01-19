@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <svg>
+        <circle cx="100" cy="100" r="20" fill="black" id="circle" >
+
+        </circle>
+
+    </svg>
+ <!-- <img src="sad.png" width="100px" id="imagsrc">
+ <img src="smiley.png" width="100px" id="imagsrc2"> -->
+
+    <canvas id="myCanvas" width="400px" height="200px">
+        
+    </canvas>
+
+   
+
+
+    <script>
+
+        let circle=document.getElementById("circle");
+
+        circle.addEventListener("mouseover",function(){
+            circle.style.fill= "red";
+            circle.style.stroke= "pink";
+        })
+
+        circle.addEventListener("mousedown",function(){
+            circle.style.fill= "aqua";
+            circle.style.stroke= "red";
+        })
+        circle.addEventListener("mouseup",function(){
+            alert("this is a responsive circle");
+        })
+
+        window.onload = function() {
+        const myCanvas = document.getElementById('myCanvas'); 
+        const myContext = myCanvas.getContext('2d');
+ 
+        // Create our image
+        let newImage = new Image();
+        newImage.src = 'sad.png'
+
+        let newImage2 = new Image();
+        newImage2.src = 'smiley.png'
+
+        newImage.onload = () => {
+        myContext.drawImage(newImage, 0, 0, 50, 50);
+        }
+        
+        myCanvas.addEventListener("mousedown",function()
+        {
+            myContext.drawImage(newImage2, 0, 0, 50, 50);
+        })
+        myCanvas.addEventListener("mouseup",function()
+        {
+            myContext.drawImage(newImage, 0, 0, 50, 50);
+        })
+
+        }
+
+        
+
+    </script>
+</body>
+</html>

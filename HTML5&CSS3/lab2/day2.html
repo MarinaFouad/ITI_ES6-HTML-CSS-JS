@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="day2.css">
+</head>
+<body>
+    
+   <!-------------------circle when mouseOver change its color and style-------------------------------------------------->
+    <div>
+        <div  class="myCanvas">
+            circle when mouseOver change its color and style
+            <svg>
+              <circle cx="100" cy="100" r="20" fill="black" id="circle" >
+    
+              </circle>
+
+                
+            </svg>
+
+        </div>
+        
+       <!-----------a circle and fill it using semi-transparent color, and write your name inside -------------------->
+
+        <div class="myCanvasSpecial" >
+          
+            <canvas id="cicleFont" width="400px" height="400px" > </canvas>
+
+        </div>
+
+        <!-----------------sad face image on a canvas, on mouse is down change the image to smiley face --------------------------->
+        <div class="myCanvas">
+            sad face image on a canvas, on mouse is down change the image to smiley face
+             <canvas id="myCanvas" width="400px" height="200px">
+            
+              </canvas>
+
+        </div>
+      
+        <canvas id="circ" width="400px" height="200px">
+            
+        </canvas>
+     </div>
+
+       <!-------------------HTML5 drag and drop------------------------------------------------------------->
+
+
+    <div class="dragging"> 
+
+        <div class="dragbox" ondrop="drop(this)" ondragover="event.preventDefault()"> drag here</div>
+        <div class="imgDrop"> 
+        <img src="sad.png" draggable="true" ondragstart="dragStart(this)" width="30px">
+        <img src="sad.png" draggable="true" ondragstart="dragStart(this)" width="30px">
+        <img src="smiley.png" draggable="true" ondragstart="dragStart(this)" width="30px">
+        <img src="smiley.png" draggable="true" ondragstart="dragStart(this)" width="30px">
+        </div>
+    </div>
+
+
+     <!------------------------Make a page that has a button that when clicked gets your location---------------------------------->
+
+
+     <div class="maps">
+        <button onclick="getPosition()"> Get your location</button>
+
+
+     </div>
+
+    <!-------------------------------------------------------------------------------->
+
+
+
+
+    <!------------------------When left click and drag, make the mouse draw on the canvas---------------------------------->
+
+
+    <div class="drawing">
+       white board
+        <canvas id="drawing" width="700px" height="700px"></canvas>
+
+
+     </div>
+
+    <!-------------------------------------------------------------------------------->
+
+
+   
+
+
+    <script>
+
+
+//////////////////////////Make a page that has a button that when clicked gets your location-///////////////
+getPos();
+
+function getPos() {
+    navigator.geolocation.getCurrentPosition(getLongAndLat)
+    console.log("you get location sucess")
+}
+
+var long = 0;
+var lat = 0;
+
+function getLongAndLat(geo) {
+    long = geo.coords.longitude;
+    lat = geo.coords.latitude;
+    
+}
+   function getPosition(){
+    var url = "http://maps.google.com/maps?q=" + long + "," + lat;
+    window.open(url)
+   }
+
+
+
+   //////////--HTML5 drag and drop-///////////////////////////////////////////////////////////////
+
+
+    var imgDrop;
+
+    function dragStart(img){
+        imgDrop =img;
+    }
+    function drop(div){
+        div.appendChild(imgDrop);
+    }
+
+    
+
+///////////circle when mouseOver change its color and style///////////////////////////////////////////
+
+
+
+
+let circle=document.getElementById("circle");
+
+circle.addEventListener("mouseover",function(){
+    circle.style.fill= "red";
+    circle.style.stroke= "pink";
+})
+
+circle.addEventListener("mousedown",function(){
+    circle.style.fill= "aqua";
+    circle.style.stroke= "red";
+})
+circle.addEventListener("mouseup",function(){
+    alert("this is a responsive circle");
+})
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+window.onload = function() {
+const myCanvas = document.getElementById('myCanvas'); 
+const myContext = myCanvas.getContext('2d');
+
+
+let newImage = new Image();
+newImage.src = 'sad.png'
+
+let newImage2 = new Image();
+newImage2.src = 'smiley.png'
+var onMouse= false;
+
+newImage.onload = () => {
+myContext.drawImage(newImage, 0, 0, 50, 50);
+}
+
+myCanvas.addEventListener("mousedown",function()
+{
+    onMouse = true;
+    myContext.clearRect(0, 0,50, 50);
+    myContext.drawImage(newImage2, 0, 0, 200, 200);
+
+})
+myCanvas.addEventListener("mouseup",function()
+{
+    onMouse = false;
+    myContext.clearRect(0, 0, 200, 200);
+    myContext.drawImage(newImage, 0, 0, 50, 50);
+
+})
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+const drawCircle = document.getElementById('cicleFont');
+const myName =  drawCircle.getContext("2d");
+
+
+
+myName.beginPath();
+myName.arc(200, 200, 200, 0, 2 * Math.PI);
+myName.fillStyle = "rgba(50,100,255,.5)";
+myName.fill();
+
+
+
+myName.textAlign = "center";
+const grd = myName.createLinearGradient(100, 19, 200, 0);
+grd.addColorStop(0, "red");
+grd.addColorStop(1, "pink");
+
+myName.font = "30px Comic Sans MS";
+myName.fillStyle = grd;
+myName.fillText("Marina Fouad",drawCircle.width/2, drawCircle.height/2);
+
+
+////////////////////////////white board//////////////////////////////////////////////////////
+
+
+    const myDraw= document.getElementById('drawing');
+    const contextDraw = myDraw.getContext("2d");
+
+    var onDraw=false;
+    
+    function drawing(e) {
+
+        if(onDraw==false){return;}
+        contextDraw.lineWidth = 5;
+        contextDraw.lineCap="round";
+
+        if (e.rbuttons === 1) {
+            contextDraw.strokeStyle = "black";
+    } else if (e.buttons === 2) {
+        contextDraw.strokeStyle = "white";
+    }
+
+    
+    contextDraw.lineTo(e.offsetX, e.offsetY);
+    contextDraw.stroke();
+    contextDraw.beginPath();
+    contextDraw.moveTo(e.offsetX, e.offsetY);
+  }
+
+  myDraw.addEventListener("mousedown", function(e) {
+    onDraw = true;
+    drawing(e);
+  });
+
+  myDraw.addEventListener("mousemove", drawing);
+
+  myDraw.addEventListener("mouseup", function (){ onDraw = false});
+  myDraw.addEventListener("mouseout", function() {onDraw = false});
+    </script>
+</body>
+</html>
