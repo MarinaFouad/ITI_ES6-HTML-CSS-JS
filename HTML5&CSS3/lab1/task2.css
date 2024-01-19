@@ -1,0 +1,138 @@
+html{
+    height: 100%;
+    margin: 0px;
+}
+body{height: 100%;
+
+margin: 0px;}
+
+header{
+    width: 100%;
+    background-color: green;
+    text-align: center;
+    background-image: url(img/header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40%;
+    margin-top: 0px;
+}
+
+header>div{
+    position: relative;
+    top:50px;
+    font-size: 50px;
+ 
+}
+
+nav{
+    width: 100%;
+    background-color: red;
+    display: inline-block;
+	list-style:none;
+	font-size:20px;	
+	margin:0;
+	padding: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+	overflow: hidden;
+	background-color: #333;
+	position: -webkit-sticky; 
+	position: sticky;
+	top: 0;
+	z-index:2;
+    align-items: center;
+}
+nav>div{
+    position: relative;
+    left: 35%;
+}
+ul{
+    margin: 0px;
+    list-style:none;
+}
+
+li {
+  float: left;
+
+}
+
+
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+aside,section{
+    display: inline-block;
+    height: 100%;
+}
+aside{
+    position: relative;
+    float: left;
+    left: 20px;
+    background-color: rgb(199, 152, 188);
+    width: 40%;
+    border: solid 1px transparent;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+section{
+    position: relative;
+    align-items: center;
+    float: right;
+    background-color: rgb(220, 180, 218);
+    border: solid 1px transparent;
+    border-radius:10px ;
+    width: 50%;
+    right:30px;
+    
+}
+.clear{
+    clear:both;
+}
+
+.labeling,
+.talk
+{
+	padding:10px;
+	width:80%;
+	position:relative;
+	left:10%;
+	font-size:20px;	
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-weight: 200;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height:50px;
+}
+
+video{
+    width: 40%;
+    position: relative;
+    left:30%;
+}
+
+footer{
+    align-items: center;
+    text-align: center;
+   
+    background-color: hotpink;
+}
+
+
+
+.imgHover:hover{
+    content: url(img/Filled_star.png);
+    cursor: pointer;
+}
+
+
+

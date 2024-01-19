@@ -1,0 +1,85 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+  <link rel="icon" type="image/x-icon" href="img/hi.png">
+  <meta charset="UTF-8">
+  <meta name="description" content="new web page for trail , Day 1 ITI , Welcoming">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Marina Fouad">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="lab1.css">
+    <title>Home</title>
+	
+</head> 
+
+<body>
+
+    <div class="container"> 
+
+   <form >
+        <div class="in">
+            <label for="fName">First Name</label>
+            <input type="text" required  pattern=".{3,}" id="fName" placeholder="Write your first name">
+
+        </div>
+
+        <div class="in">
+            <label for="sName">Second Name</label>
+            <input type="text" id="sName" required pattern=".{3,}" placeholder="Write your second name">
+            
+        </div>
+
+        <div class="in">
+            <label for="email">Email</label>
+            <input type="email" required id="email" placeholder="Write your Email">
+            
+        </div>
+
+        <div class="in">
+            <label >Your favourite color</label>
+            <input type="color">
+            
+        </div>
+
+        <div class="in">
+            <label >Your Birth Date</label>
+            <input type="date">
+            
+        </div>
+
+        <div class="in">
+            <label >Enter your registeration month</label>
+            <input type="month">
+            
+        </div>
+
+        <div class="in">
+            <label >the amount of suger</label>
+            <input type="range" max="10" min="0" high="8" low="2" >
+            
+        </div>
+
+        <div class="in">
+            <label >your title</label>
+            <input list="title-list"> 
+        <datalist id="title-list"> 
+        <option value="Mr"> 
+            <option value="Mrs"> 
+                <option value="Ms"> 
+        </datalist>
+          </div>
+        
+          <input type="submit" >
+        </form>
+        
+
+    </div>
+
+
+    
+
+</body>
+</html>

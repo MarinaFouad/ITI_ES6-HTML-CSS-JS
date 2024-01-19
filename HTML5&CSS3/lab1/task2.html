@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+<head>
+  <link rel="icon" type="image/x-icon" href="img/hi.png">
+  <meta charset="UTF-8">
+  <meta name="description" content="new web page for trail , Day 1 ITI , Welcoming">
+  <meta name="keywords" content="HTML">
+  <meta name="author" content="Marina Fouad">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="task2.css">
+    <title>Home</title>
+	
+</head> 
+
+<body>
+<!-------------------------------------------------------------------------------->
+    <header> <div> welcome to our page</div></header>
+    <nav>
+        <div> 
+           <ul>
+                 <li>
+                      <a href="#">home</a> 
+                 </li>
+                 <li>
+                      <a href="#"> about us</a>
+                 </li>
+                 <li>
+                    <a href="#"> contact us</a>
+               </li>
+             </ul> 
+        </div>
+        
+    </nav>
+<!-------------------------------------------------------------------------------->
+    <aside>
+       <div class="talk"> <mark>this is my profile </mark> </div>
+		<div class="talk">I'm junior Software Engineer , Fresh graduate from faculty of Engineering
+			, <mark>Communication and Electronics department.</mark></div>
+		<div class="talk">	I have knowledge in using many softwares in Engineering field like :
+			Matlab , Codeblocks , Maltism , VLSI , Wireshark and Cisco packet trace.</div>
+		<div class="talk">	Intersted in Network , Security , Embedded systems but The most interesting 
+			field for me is Software Engineering.</div> 
+		<div class="talk">I'm Eager to learn more and more in this field.</div>	
+    
+    </aside>
+
+
+    <!-------------------------------------------------------------------------------->
+    <section>
+        <div>   <p class="talk"> <mark>Some information about your visit to this website </mark> </p>
+                  <div style="display: inline-block; " > 
+                    <label class="labeling" style="margin: 40px">Rate of visiting our website</label>
+                    <meter min="0" max="10" value="7" style="margin-left: 3px;"></meter>
+                  </div>
+                    
+                  <div style="display: inline-block;">
+                        <label class="labeling" style="margin: 40px"  >your progress</label>
+                        <progress max="10" value="5" ></progress>
+                        
+                  </div>
+                  <div style="display: inline-block;">
+                    <label class="labeling" style="margin: 50px"  >website history</label>
+                   <mark><time datetime="2023-12-09">2023-12-09</time></mark> 
+                  </div>
+                  
+                <video src="video.mp4" controls muted >
+                 </video>    
+
+        </div>
+        
+
+        
+
+    </section>
+    <div class="clear"></div>
+
+
+    <!-------------------------------------------------------------------------------->
+    <footer>this is footer
+
+        <div class="star">
+            <img src="img/empty_star.png" class="imgHover" data-num="1">
+            <img src="img/empty_star.png" class="imgHover" data-num="2">
+            <img src="img/empty_star.png" class="imgHover" data-num="3">
+            <img src="img/empty_star.png" class="imgHover" data-num="4">
+            <img src="img/empty_star.png" class="imgHover" data-num="5">
+        </div>
+
+
+    </footer>
+
+    <script>
+
+            const starImg = document.querySelectorAll(".imgHover");
+
+            starImg.forEach(imgHover =>{
+              
+
+                imgHover.addEventListener('mouseout', function()
+                {
+                    if(!this.dataset.clicked){
+                        // this.setAttribute('src','img/empty_star.png');
+                       
+                        this.setAttribute('src','img/empty_star.png')
+                    }
+                   
+                });
+
+                imgHover.addEventListener('click', function(){
+            
+                if (this.dataset.clicked) {
+                     this.removeAttribute('data-clicked');
+                     this.setAttribute('src', 'img/empty_star.png');
+                    } else {
+                              this.dataset.clicked = true;
+                              this.setAttribute('src', 'img/filled_star.png');
+                    }});
+
+
+
+            }
+            );
+       
+
+
+
+    </script>
+
+
+</body>
+</html>
+
+
